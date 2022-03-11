@@ -72,14 +72,20 @@ const Map = ({ setTooltipContent }) => {
                 <Geography
                   key={geo.rsmKey}
                   geography={geo}
-                  projection={proj}
-                  onMouseEnter={() => {
+                  onClick={() => {
                     const { NAME } = geo.properties;
                     setTooltipContent(`${NAME}`);
                   }}
-                  onMouseLeave={() => {
-                    setTooltipContent("");
-                  }}
+                  projection={proj}
+                  // onMouseEnter={() => {
+                    
+
+                  //   const { NAME } = geo.properties;
+                  //   setTooltipContent(`${NAME}`);
+                  // }}
+                  // onMouseLeave={() => {
+                  //   setTooltipContent("");
+                  // }}
                   style={{
                     default: {
                       fill:
@@ -88,7 +94,7 @@ const Map = ({ setTooltipContent }) => {
                           : "#CFD8DC"
                     },
                     hover: {
-                      fill: "#F53",
+                      fill: "#000",
                       outline: "none"
                     }
                   }}
